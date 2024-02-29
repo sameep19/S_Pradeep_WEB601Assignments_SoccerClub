@@ -22,7 +22,7 @@ export class ContentListComponent implements OnInit {
       title: 'Real Madrid',
       description: 'Real Madrid Club de Fútbol (Spanish pronunciation: [reˈal maˈðɾið ˈkluβ ðe ˈfuðβol] ⓘ), commonly referred to as Real Madrid, is a Spanish professional football club based in Madrid. The club competes in La Liga, the top tier of Spanish football.',
       creator: 'Sameep',
-      imgURL: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/240px-Real_Madrid_CF.svg.png',
+      imgURL: '',
       type: 'Club',
       tags: ['club', 'spain']
     },
