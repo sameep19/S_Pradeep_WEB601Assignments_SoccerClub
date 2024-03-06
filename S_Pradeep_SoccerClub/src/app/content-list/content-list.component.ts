@@ -7,6 +7,7 @@ import { Content } from '../helper-files/content-interface';
   styleUrl: './content-list.component.scss'
 })
 export class ContentListComponent implements OnInit {
+  isError: boolean = false;
   contentArray: Content[] = [
     {
       id: 1,
@@ -80,5 +81,15 @@ export class ContentListComponent implements OnInit {
 
   handleImageClick(id: number, title: string): void {
     console.log(`Clicked on image with ID: ${id}, Title: ${title}`);
+  }
+  addContent(content: Promise<Content>){
+    content.then((newContent)=>{
+      this.contentArray = [...this.contentArray, newContent]
+      this.isError = false;
+
+    });
+    content.catch(()=>{
+      this.isError = true;
+    })
   }
 }
